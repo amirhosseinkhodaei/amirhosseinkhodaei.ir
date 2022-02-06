@@ -43,7 +43,7 @@ export const Projects = () => {
                   <p className="text-xl font-bold">{pro.title}</p>
                   <div className="flex flex-row">
                     {pro.links.map((link) => (
-                      <a href={link.href} title={link.titleInfo}>
+                      <a href={link.href} title={link.titleInfo} target="_blank" rel="noreferrer">
                         <span
                           className={`flex items-center justify-center rounded-md transition duration-300 hover:bg-black hover:ring-2 ${link.ringColor} ${link.bgColor} w-[40px] h-[40px] m-0 p-0 mr-2 mt-2`}>
                           <i class={`${link.icon} text-lg`} />
