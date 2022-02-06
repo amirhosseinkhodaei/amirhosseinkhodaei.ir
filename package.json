@@ -2,6 +2,7 @@
   "name": "amirhosseinkhodaei",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://amirhosseinkhodaei.github.io/amirhosseinkhodaei.ir/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -18,6 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "css": "TAILWIND_MODE=watch postcss src/assets/styles/main.css -o src/assets/styles/main.min.css --watch --verbose",
+    "predeploy": "yarn run build",
     "deploy": "yarn run build:css && yarn run build && gh-pages -d build",
     "gh-pages": "gh-pages -d build"
   },
