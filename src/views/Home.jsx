@@ -12,7 +12,7 @@ export const Home = () => {
         className="min-h-screen flex flex-col justify-center items-center">
         <div className="sm:w-[500px] w-screen p-5 py-20 text-lg select-none">
           <p className="mb-4">
-            Hi! I'm a Team Leader & Web Developer, currently working as CTO at
+            Hi! I'm a Web Developer, currently working as Front-End Developer at
             <a
               className="mx-2 px-2 bg-aqua-0 rounded-full
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-aqua-0"
@@ -53,7 +53,7 @@ export const Home = () => {
             <a
               className="mx-2 px-2 bg-light-1 rounded-full text-dark-0 hover:text-light-0
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-light-1"
-              href="tel:+989217214929"
+              href="tel:+989120126656"
               title="Phone">
               Talk
             </a>
@@ -61,65 +61,39 @@ export const Home = () => {
             <a
               className="mx-2 px-2 bg-light-1 rounded-full text-dark-0 hover:text-light-0
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-light-1"
-              href="mailto:aasmpro@gmail.com"
+              href="mailto:amir76_kh@yahoo.com"
               title="Email">
               Chat
             </a>
             about anything related to tech. it's always a pleasure to meet new
             people ;]
           </p>
-          <p>
-            Join me to play
-            <a
-              className="mx-2 px-2 bg-green-0 rounded-full
-              transition duration-300  hover:bg-black hover:ring-2 hover:ring-green-0"
-              href="https://www.chess.com/member/aasmpro"
-              title="Chess">
-              Chess
-            </a>
-            or
-            <a
-              className="mx-2 px-2 bg-red-0 rounded-full
-              transition duration-300  hover:bg-black hover:ring-2 hover:ring-red-0"
-              href="https://steamcommunity.com/id/aasmpro/"
-              title="Dota2">
-              Dota2
-            </a>
-            .
-          </p>
           <div className="mt-5 flex flex-wrap gap-2 leading-snug">
             <a
               className="px-2 bg-dark-3 rounded-full
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-dark-3"
-              href="https://github.com/aasmpro"
+              href="https://github.com/amirhosseinkhodaei"
               title="Github">
               Github
             </a>
             <a
-              className="px-2 bg-orange-0 rounded-full
-              transition duration-300  hover:bg-black hover:ring-2 hover:ring-orange-0"
-              href="https://stackoverflow.com/users/6484831/aasmpro"
-              title="Stackoverflow">
-              StackOverflow
-            </a>
-            <a
               className="px-2 bg-blue-0 rounded-full
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-blue-0"
-              href="https://www.linkedin.com/in/aasmpro/"
+              href="https://www.linkedin.com/in/amirhossein-khodaei-36141b169/"
               title="Linkedin">
               LinkedIn
             </a>
             <a
               className="px-2 bg-blue-1 rounded-full
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-blue-1"
-              href="https://twitter.com/aasmpro"
+              href="https://twitter.com/amir76_kh"
               title="Twitter">
               Twitter
             </a>
             <a
               className="px-2 bg-blue-0 rounded-full
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-blue-0"
-              href="https://telegram.me/aasmpro/"
+              href="https://telegram.me/amir76_kh/"
               title="Telegram">
               Telegram
             </a>

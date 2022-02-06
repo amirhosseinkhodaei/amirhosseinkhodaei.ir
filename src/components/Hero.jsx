@@ -11,12 +11,10 @@ charsMatrix[15][28] = <Char value="M" />;
 charsMatrix[22][30] = <Char value="↓" />;
 
 const values = [
-  ["ABOLFAZL", ""],
+  ["AMIRHOSSEIN"],
   ["A WEB", "DEVELOPER"],
-  ["A TEAM", "  LEADER"],
-  ["A CHESS", "  LOVER"],
-  ["A PYTHON-", "  ISTA"],
-  ["A GAMER", ""],
+  ["A FRONT", "  DEVELOPER"],
+  ["A WORDPRESS", "  DESIGNER"],
   ["A FOOD", "  LOVER"],
 ];
 
@@ -36,7 +34,7 @@ export const Hero = () => {
   return (
     <div className="h-screen overflow-hidden flex justify-center items-center">
       <div className="flex-col justify-center items-center">
-        {setCharsMatrix(charsMatrix, values[index], 16, 18, 26, 35).map(
+        {setCharsMatrix(charsMatrix, values[index], 16, 18, 26, 50).map(
           (line) => (
             <div className="whitespace-nowrap">{line.map((char) => char)}</div>
           )

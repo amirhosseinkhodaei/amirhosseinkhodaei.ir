@@ -17,7 +17,7 @@ export const Resume = () => {
             <a
               className="px-3 py-0.5 bg-yellow-0 rounded-full
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-yellow-0"
-              href="/AbolfazlAmiri.pdf" target="_blank">
+              href="/AmirhosseinKhodaei.pdf" target="_blank">
               Download
             </a>
           </div>
@@ -26,72 +26,66 @@ export const Resume = () => {
           <div className="pb-4 flex flex-col justify-between md:flex-row print:flex-row">
             <div>
               <p className="print:text-4xl text-4xl font-bold">
-                Abolfazl Amiri
+                Amirhossein Khodaei
               </p>
-              <p className="print:text-2xl text-2xl">Python & Web Developer</p>
+              <p className="print:text-2xl text-2xl">Web Developer</p>
             </div>
             <div className="flex flex-col print:text-sm whitespace-nowrap mt-5 md:mt-0 print:mt-0">
               <div className="mb-2 print:mb-1.5">
                 <a
                   className="block max-w-[243px] px-3 py-0.5 font-bold bg-blue-0 rounded-full print:text-light-0
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
-                  href="https://abolfazlamiri.ir"
+                  href="https://amirhosseinkhodaei.ir"
                   title="Webpage">
                   <i class="fas fa-globe-americas text-light-0 mr-1.5" />{" "}
-                  abolfazlamiri.ir
+                  amirhosseinkhodaei.ir
                 </a>
               </div>
               <div className="mb-2 print:mb-1.5">
                 <a
                   className="block max-w-[243px] px-3 py-0.5 font-bold bg-red-0 rounded-full print:text-light-0
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-red-0"
-                  href="mailto:aasmpro@gmail.com"
+                  href="mailto:amir76_kh@yahoo.com"
                   title="Email">
-                  <i class="fas fa-at text-light-0 mr-1.5" /> aasmpro@gmail.com
+                  <i class="fas fa-at text-light-0 mr-1.5" /> amir76_kh@yahoo.com
                 </a>
               </div>
               <div className="mb-2 print:mb-1.5">
                 <a
                   className="block max-w-[243px] px-3 py-0.5 font-bold bg-blue-0 rounded-full print:text-light-0
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
-                  href="tel:+989217214929"
+                  href="tel:+989120126656"
                   title="Phone">
-                  <i class="fas fa-phone text-light-0 mr-1.5" /> +989217214929
+                  <i class="fas fa-phone text-light-0 mr-1.5" /> +989120126656
                 </a>
               </div>
               <div className="flex flex-wrap">
                 <a
                   className="px-3.5 mr-2 py-0.5 font-bold bg-dark-2 rounded-full print:text-light-0
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-dark-2"
-                  href="https://github.com/aasmpro"
+                  href="https://github.com/amirhosseinkhodaei"
                   title="Github">
                   <i class="fab fa-github-alt text-light-0" />
                 </a>
-                <a
-                  className="px-3.5 mr-2 py-0.5 font-bold bg-orange-0 rounded-full print:text-light-0
-                  transition duration-300 hover:bg-black hover:ring-2 hover:ring-orange-0"
-                  href="https://stackoverflow.com/users/6484831/aasmpro"
-                  title="Stackoverflow">
-                  <i class="fab fa-stack-overflow text-light-0" />
-                </a>
+                
                 <a
                   className="px-3.5 mr-2 py-0.5 font-bold bg-blue-0 rounded-full print:text-light-0
                   transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
-                  href="https://www.linkedin.com/in/aasmpro/"
+                  href="https://www.linkedin.com/in/amirhossein-khodaei-36141b169/"
                   title="Linkedin">
                   <i class="fab fa-linkedin-in text-light-0" />
                 </a>
                 <a
                   className="px-3.5 mr-2 py-0.5 font-bold bg-blue-0 rounded-full print:text-light-0
                   transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
-                  href="https://twitter.com/aasmpro"
+                  href="https://twitter.com/amir76_kh"
                   title="Twitter">
                   <i class="fab fa-twitter text-light-0" />
                 </a>
                 <a
                   className="px-3.5 py-0.5 font-bold bg-blue-0 rounded-full print:text-light-0
                   transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
-                  href="https://telegram.me/aasmpro/"
+                  href="https://telegram.me/amir76_kh/"
                   title="Telegram">
                   <i class="fab fa-telegram-plane text-light-0" />
                 </a>
@@ -101,26 +95,18 @@ export const Resume = () => {
           <div className="py-4 print:text-sm">
             <p className="mb-3 print:text-xl text-2xl font-bold">About Me</p>
             <div className="text-justify">
-              Hi! I'm a Team Leader & Web Developer, currently working as CTO at{" "}
+              Hi! I'm a Web Developer, currently working as Front-End Developer at{" "}
               <a
                 href="https://snappcarfix.com"
                 className="text-blue-0 font-bold">
                 SnappCarFix
               </a>
-              , the largest online platform for car parts and services in Iran.
-              I have around 5 years of experience in software development mainly
-              in Web Development, more than 2 years of leading the tech teams.
-              My aim is to enhance user experience and create new values in
-              addition to delivering a clean scalable code, by being closely in
-              touch with the end-users. I can easily make strong sincere
-              relations with my team and help them to develop themselves. I'm a
-              self-learner, without prejudice on tools and tech stacks, and
-              ready for new challenges.
+              , the largest online platform for car parts and services in Iran. I have around 1 years of experience in software development mainly in Web Development.  I'm a self-learner, without prejudice on tools and tech stacks, and ready for new challenges.
               <ul class="print:text-xs list-disc pl-4 pt-2 grid md:grid-cols-2 print:sm:grid-cols-2">
-                <li>Education: B.S. Computer Engineering</li>
+                <li>Education: Master. Information Security Engineering</li>
                 <li>Marriage: Single</li>
                 <li>Military Service: Exempted</li>
-                <li>Birth Date: 22 Feb 1996</li>
+                <li>Birth Date: 18 March 1998</li>
               </ul>
             </div>
           </div>
@@ -240,16 +226,16 @@ export const Resume = () => {
               Check out my site & Github for projects.
               <div class="flex flex-row flex-wrap mt-2">
                 <a
-                  href="https://abolfazlamiri.ir/#projects"
+                  href="https://amirhosseinkhodaei.ir/#projects"
                   className="px-3 py-0.5 mx-1 my-1 font-bold bg-blue-0 rounded-full print:text-light-0
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0">
-                  abolfazlamiri.ir/#Projects
+                  amirhosseinkhodaei.ir/#Projects
                 </a>
                 <a
-                  href="https://github.com/aasmpro"
+                  href="https://github.com/amirhosseinkhodaei"
                   className="px-3 py-0.5 mx-1 my-1 font-bold bg-blue-0 rounded-full print:text-light-0
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0">
-                  github.com/aasmpro
+                  github.com/amirhosseinkhodaei
                 </a>
               </div>
             </div>
