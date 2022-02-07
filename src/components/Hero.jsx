@@ -4,9 +4,9 @@ import { Char, getCharsMatrix, setCharsMatrix } from "./Char";
 
 let charsMatrix = getCharsMatrix(31, 61);
 
-charsMatrix[15][26] = <Char value="I" />;
-charsMatrix[15][27] = <Char value="'" />;
-charsMatrix[15][28] = <Char value="M" />;
+charsMatrix[15][25] = <Char value="I" />;
+charsMatrix[15][26] = <Char value="'" />;
+charsMatrix[15][27] = <Char value="M" />;
 
 charsMatrix[22][30] = <Char value="↓" />;
 
@@ -34,7 +34,7 @@ export const Hero = () => {
   return (
     <div className="h-screen overflow-hidden flex justify-center items-center">
       <div className="flex-col justify-center items-center">
-        {setCharsMatrix(charsMatrix, values[index], 16, 18, 26, 50).map(
+        {setCharsMatrix(charsMatrix, values[index], 16, 18, 25, 50).map(
           (line) => (
             <div className="whitespace-nowrap">{line.map((char) => char)}</div>
           )
