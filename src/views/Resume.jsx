@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { skills, experiences } from "../data";
+import { skills, experiences, educations } from "../data";
 
 export const Resume = () => {
   return (
@@ -67,7 +67,7 @@ export const Resume = () => {
                   title="Github">
                   <i class="fab fa-github-alt text-light-0" />
                 </a>
-                
+
                 <a
                   className="px-3.5 mr-2 py-0.5 font-bold bg-blue-0 rounded-full print:text-light-0
                   transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
@@ -108,6 +108,40 @@ export const Resume = () => {
                 <li>Military Service: Exempted</li>
                 <li>Birth Date: 18 March 1998</li>
               </ul>
+            </div>
+          </div>
+          <div className="py-4 print:text-sm">
+            <p className="mb-3 print:text-xl text-2xl font-bold">Educations</p>
+            <div>
+              {educations
+                .filter((edu) => edu.showEducations)
+                .map((edu) => (
+                  <div className="py-2 first:pt-0">
+                    <div className="flex justify-between">
+                      <div>
+                        <p className="print:text-base font-semibold">
+                          {edu.title}
+                        </p>
+                        <div className="whitespace-nowrap sm:hidden">
+                          <p className="print:text-xs text-sm font-semibold">
+                            {edu.major}
+                          </p>
+                          <p className="print:text-xs text-sm font-semibold">
+                            {edu.startDate} - {edu.endDate}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="text-right whitespace-nowrap hidden sm:block">
+                        <p className="print:text-xs text-sm font-semibold">
+                          {edu.major}
+                        </p>
+                        <p className="print:text-xs text-sm font-semibold">
+                          {edu.startDate} - {edu.endDate}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
             </div>
           </div>
           <div className="py-4 print:text-sm">
