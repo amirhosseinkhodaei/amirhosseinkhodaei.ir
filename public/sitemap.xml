@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
 	      <loc>https://amirhosseinkhodaei.ir/</loc>
-        <lastmod>2022-02-06</lastmod>
+        <lastmod>2022-03-05</lastmod>
+    </url>
+    <url>
+	      <loc>https://amirhosseinkhodaei.ir/#resume</loc>
+        <lastmod>2022-03-05</lastmod>
+    </url>
+    <url>
+	      <loc>https://amirhosseinkhodaei.ir/#projects</loc>
+        <lastmod>2022-03-05</lastmod>
     </url>
 </urlset>
