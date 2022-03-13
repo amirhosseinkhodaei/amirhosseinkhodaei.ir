@@ -14,10 +14,14 @@ export const experiences = [
     responsible: "Responsibilities:",
     responsibilities: [
       "Develop and deliver platform",
-      "Code cleaning and some times adding some features to the project."
+      "Code cleaning and some times adding some features to the project.",
+      "Developed and structured the core module for React frontend projects",
+      "Rewrite and developed callcenter panel project using React",
+      "Developed a real-time web crawler with a attractive frontend using python and react.js"
     ],
     stack: [
       "React",
+      "Python",
       "Wordpress",
     ],
     links: [

@@ -119,9 +119,9 @@ export const Resume = () => {
                   <div className="py-2 first:pt-0">
                     <div className="flex justify-between">
                       <div>
-                        <p className="print:text-base font-semibold">
+                        <li className="print:text-base font-semibold">
                           {edu.title}
-                        </p>
+                        </li>
                         <div className="whitespace-nowrap sm:hidden">
                           <p className="print:text-xs text-sm font-semibold">
                             {edu.major}
