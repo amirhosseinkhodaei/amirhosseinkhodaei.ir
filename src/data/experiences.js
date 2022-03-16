@@ -17,7 +17,11 @@ export const experiences = [
       "Code cleaning and some times adding some features to the project.",
       "Developed and structured the core module for React frontend projects",
       "Rewrite and developed callcenter panel project using React",
-      "Developed a real-time web crawler with a attractive frontend using python and react.js"
+      "Developed a real-time web crawler with a attractive frontend using python and react.js",
+      "Implementing new features for website",
+      "Implementing the graphical element according to the concept",
+      "Managing projects on Gitlab",
+
     ],
     stack: [
       "React",
