@@ -16,5 +16,7 @@ export const skills = [
   "Material UI",
   "Bootstrap",
   "MySQL Database Managment",
-  "Web Crawling"
+  "Web Crawling",
+  "Linux Servers",
+  "Docker",
 ];

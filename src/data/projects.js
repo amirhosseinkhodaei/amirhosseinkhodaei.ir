@@ -104,5 +104,26 @@ export const projects = [
     showProjects: true,
     showExperiences: true,
   },
+  {
+    title: "Bartanco.ir",
+    about: [
+      "The front-end of this Website developed by react.js where integrated with Php laravel back-end. It's an online shop that has all professional Automatic Accounting system with 4 panels for Drivers,Warehouse keeper,Customers and Admin of system with different permissions.",
+    ],
+    stack: ["React.js","Redux","Laravel","Html","Css"],
+    links: [
+      {
+        title: "amirhosseinkhodaei/Bartanco.ir",
+        href: "https://bartanco.ir",
+        titleInfo: "WebPage",
+        icon: "fas fa-link",
+        bgColor: "bg-blue-0",
+        ringColor: "ring-blue-0",
+      },
+    ],
+    orderProjects: 300,
+    orderExperiences: 0,
+    showProjects: true,
+    showExperiences: true,
+  },
 
 ];
