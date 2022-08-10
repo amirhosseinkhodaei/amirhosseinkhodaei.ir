@@ -19,4 +19,5 @@ export const skills = [
   "Web Crawling",
   "Linux Servers",
   "Docker",
+  "Rest Api"
 ];

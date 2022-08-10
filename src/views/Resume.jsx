@@ -101,7 +101,7 @@ export const Resume = () => {
                 className="text-blue-0 font-bold">
                 SnappCarFix
               </a>
-              , the largest online platform for car parts and services in Iran. I have around 1 years of experience in software development mainly in Web Development.  I'm a self-learner, without prejudice on tools and tech stacks, and ready for new challenges.
+              , the largest online platform for car parts and services in Iran. I have around 2 years of experience in software development mainly in Web Development. My aim is to enhance user experience and create new values in addition to delivering a clean scalable code, by being closely in touch with the end-users.
               <ul class="print:text-xs list-disc pl-4 pt-2 grid md:grid-cols-2 print:sm:grid-cols-2">
                 <li>Education: Master. Information Security Engineering</li>
                 <li>Marriage: Single</li>
@@ -147,7 +147,7 @@ export const Resume = () => {
           <div className="py-4 print:text-sm">
             <p className="mb-3 print:text-xl text-2xl font-bold">Skills</p>
             <p className="mb-2">
-              In summary, i have experience working with these tools and often
+              In summary, I have experience working with these tools and often
               use them:
             </p>
             <ul class="list-disc pl-4 grid sm:grid-cols-2 md:grid-cols-3 print:sm:grid-cols-3">
