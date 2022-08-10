@@ -13,7 +13,7 @@ charsMatrix[22][30] = <Char value="↓" />;
 const values = [
   ["AMIRHOSSEIN"],
   ["A WEB", "DEVELOPER"],
-  ["A FRONT", "  DEVELOPER"],
+  ["A FRONT-END", "  DEVELOPER"],
   ["A WORDPRESS", "  DESIGNER"],
   ["A FOOD", "  LOVER"],
 ];
