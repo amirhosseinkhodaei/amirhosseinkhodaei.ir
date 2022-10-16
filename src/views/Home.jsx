@@ -16,10 +16,10 @@ export const Home = () => {
             <a
               className="mx-2 px-2 bg-aqua-0 rounded-full
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-aqua-0"
-              href="https://snappcarfix.com">
-              SnappCarFix
+              href="https://payampardaz.com">
+              PayamPardaz
             </a>
-            , the largest online platform for Car parts and services in Iran, backed by Snapp (Uber clone).
+            , where established in 1996 in order to provide technical services in the field of IT & ICT security.
           </p>
           <p className="mb-4">
             Here is my

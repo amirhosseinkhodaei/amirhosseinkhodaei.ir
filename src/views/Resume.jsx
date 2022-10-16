@@ -97,11 +97,11 @@ export const Resume = () => {
             <div className="text-justify">
               Hi! I'm a Web Developer, currently working as Front-End Developer at{" "}
               <a
-                href="https://snappcarfix.com"
-                className="text-blue-0 font-bold">
-                SnappCarFix
+                href="https://payampardaz.com"
+                className="text-base-0 font-bold">
+                PayamPardaz
               </a>
-              , the largest online platform for car parts and services in Iran. I have around 2 years of experience in software development mainly in Web Development. My aim is to enhance user experience and create new values in addition to delivering a clean scalable code, by being closely in touch with the end-users.
+              , where established in 1996 in order to provide technical services in the field of IT & ICT security.
               <ul class="print:text-xs list-disc pl-4 pt-2 grid md:grid-cols-2 print:sm:grid-cols-2">
                 <li>Education: Master. Information Security Engineering</li>
                 <li>Marriage: Single</li>

@@ -1,9 +1,29 @@
 export const experiences = [
   {
     title: "FrontEnd - Web Developer",
-    company: "SnappCarFix / CarFillo",
-    startDate: "March 2021",
+    company: "PayamPardaz",
+    startDate: "October 2022",
     endDate: "present",
+    type: "Full-time",
+    location: "Isfahan, Iran",
+    about: [
+      "PayamPardaz has a diverse package of IT security products with 150 research projects and implemented professional services in its resume (including 109 projects with employers as well as 43 projects with domestic investment).",
+      "Currently, activity field of PayamPardaz fulfills all fields of consulting, design and implementation; it is extended from research projects such as design and analysis of cryptography algorithms and implementation of hardware and software projects to Commercialization of products as well as offering services for sales advice and after-sales services."
+    ],
+    stack: ["React.js","Vue.js"],
+    links: [
+      {
+        title: "payampardaz.com",
+        href: "https://payampardaz.com",
+      },
+    ],
+    showExperiences: true,
+  },
+  {
+    title: "FrontEnd - Web Developer",
+    company: "SnappCarFix / CarFillo",
+    startDate: "February 2021",
+    endDate: "September 2022",
     type: "Full-time",
     location: "Isfahan, Iran",
     about: [
@@ -21,13 +41,9 @@ export const experiences = [
       "Implementing new features for website",
       "Implementing the graphical element according to the concept",
       "Managing projects on Gitlab",
-      "Contributed to projects within Scrum project management environments."
+      "Contributed to projects within Scrum project management environments.",
     ],
-    stack: [
-      "React.js",
-      "Python",
-      "Wordpress",
-    ],
+    stack: ["React.js", "Python", "Wordpress"],
     links: [
       {
         title: "snappcarfix.com",
@@ -47,5 +63,5 @@ export const experiences = [
       },
     ],
     showExperiences: true,
-  }
+  },
 ];
