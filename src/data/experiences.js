@@ -5,12 +5,11 @@ export const experiences = [
     startDate: "October 2022",
     endDate: "present",
     type: "Full-time",
-    location: "Isfahan, Iran",
+    location: "Iran, Isfahan",
     about: [
       "PayamPardaz has a diverse package of IT security products with 150 research projects and implemented professional services in its resume (including 109 projects with employers as well as 43 projects with domestic investment).",
-      "Currently, activity field of PayamPardaz fulfills all fields of consulting, design and implementation; it is extended from research projects such as design and analysis of cryptography algorithms and implementation of hardware and software projects to Commercialization of products as well as offering services for sales advice and after-sales services."
     ],
-    stack: ["React.js","Vue.js"],
+    stack: ["Vue Js","React Native","Ansible","Ubuntu"],
     links: [
       {
         title: "payampardaz.com",
@@ -18,6 +17,22 @@ export const experiences = [
       },
     ],
     showExperiences: true,
+    contribution:"Contribution",
+    contributions:[
+      "Maintain & refactor legacy +3 dashboards like MFA system",
+      "Structured a new design system that converts Element Plus components to custom components with specified roles for +80% department projects",
+      "Converted & refactored +90% of project from Option Api to Composition Api",
+      "Implemented an extra data push notification in order to increase 10% more immunity to MITM attacks in signing stage"
+    ],
+    responsible: "Responsibilities:",
+    responsibilities: [
+      "Creating dashboards and web applications utilizing Vue.js in a professional context.",
+      "Sustaining mobile applications through the use of the React Native framework in a professional capacity.",
+    ],
+    achievement:"Achievements",
+    achievements:[
+      "Decreased +80% complexity of developing and maintaining Previous and future projects based on Kaman design system."      
+    ]
   },
   {
     title: "FrontEnd - Web Developer",
@@ -29,21 +44,20 @@ export const experiences = [
     about: [
       "SnappCarFix is an online platform for Car parts and services, backed by Snapp (Uber clone).",
       "It includes web apps for Stores, ServiceCenters, Agents, and Sellers, to offer products/services like oil, battery, engine parts, car wash, etc, with 7 delivery/service solutions per product.",
-      "CarFillo sells products to service centers, it's an Online Shop, which service centers gain credits here based on their services on SnappCarFix.",
     ],
     responsible: "Responsibilities:",
     responsibilities: [
-      "Develop and deliver platform",
-      "Code cleaning and some times adding some features to the project.",
-      "Developed and structured the core module for React frontend projects",
-      "Rewrite and developed callcenter panel project using React",
-      "Developed a real-time web crawler with a attractive frontend using python and react.js",
-      "Implementing new features for website",
-      "Implementing the graphical element according to the concept",
-      "Managing projects on Gitlab",
-      "Contributed to projects within Scrum project management environments.",
+      "Developing and delivering platform solutions",
+      "Performing code maintenance and occasionally adding new features to projects",
+      "Architecting and structuring core modules for React frontend projects",
+      "Rewriting and enhancing the call center panel project using React",
+      "Creating a real-time web crawler with an appealing frontend using Python and React.js",
+      "Integrating new features into websites",
+      "Designing graphical elements in alignment with the conceptual framework",
+      "Overseeing projects on Gitlab",
+      "Contributing to projects within Scrum project management frameworks"
     ],
-    stack: ["React.js", "Python", "Wordpress"],
+    stack: ["React Js", "Python", "Wordpress"],
     links: [
       {
         title: "snappcarfix.com",

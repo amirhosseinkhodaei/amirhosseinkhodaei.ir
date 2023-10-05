@@ -1,8 +1,8 @@
 export const educations = [
     {
-      title: "Master - Malek Ashtar University of Technology",
+      title: "Master - Malek Ashtar University of Technology (MUT)",
       startDate: "2021",
-      endDate: "present",
+      endDate: "2023",
       major:'Information Security',
       showEducations: true,
     },

@@ -28,7 +28,7 @@ export const Resume = () => {
               <p className="print:text-4xl text-4xl font-bold">
                 Amirhossein Khodaei
               </p>
-              <p className="print:text-2xl text-2xl">Web Developer</p>
+              <p className="print:text-2xl text-2xl">Front-End Engineer</p>
             </div>
             <div className="flex flex-col print:text-sm whitespace-nowrap mt-5 md:mt-0 print:mt-0">
               <div className="mb-2 print:mb-1.5">
@@ -95,23 +95,16 @@ export const Resume = () => {
           <div className="py-4 print:text-sm">
             <p className="mb-3 print:text-xl text-2xl font-bold">About Me</p>
             <div className="text-justify">
-              Hi! I'm a Web Developer, currently working as Front-End Developer at{" "}
-              <a
-                href="https://payampardaz.com"
-                className="text-base-0 font-bold">
-                PayamPardaz
-              </a>
-              , where established in 1996 in order to provide technical services in the field of IT & ICT security.
+            I am a front-end engineer with +3 years of experience and am familiar with back-end technologies. What truly satisfies my passion in the programming field is the act of solving problems and delving into new technologies. Learning and teaching web-based technologies is incredibly exciting, and as a developer, there's still a vast amount for me to explore and learn.
               <ul class="print:text-xs list-disc pl-4 pt-2 grid md:grid-cols-2 print:sm:grid-cols-2">
-                <li>Education: Master. Information Security Engineering</li>
+                <li>Education: Master of Information Security Engineering</li>
                 <li>Marriage: Single</li>
-                <li>Military Service: Exempted</li>
-                <li>Birth Date: 18 March 1998</li>
+                <li>Date of Birth: 18 March 1998</li>
               </ul>
             </div>
           </div>
           <div className="py-4 print:text-sm">
-            <p className="mb-3 print:text-xl text-2xl font-bold">Educations</p>
+            <p className="mb-3 print:text-xl text-2xl font-bold">Education</p>
             <div>
               {educations
                 .filter((edu) => edu.showEducations)
@@ -147,8 +140,7 @@ export const Resume = () => {
           <div className="py-4 print:text-sm">
             <p className="mb-3 print:text-xl text-2xl font-bold">Skills</p>
             <p className="mb-2">
-              In summary, I have experience working with these tools and often
-              use them:
+            In summary, I possess substantial experience working with the tools below and frequently utilize them in my work:
             </p>
             <ul class="list-disc pl-4 grid sm:grid-cols-2 md:grid-cols-3 print:sm:grid-cols-3">
               {skills.map((skill) => (
