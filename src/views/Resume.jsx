@@ -174,13 +174,13 @@ export const Resume = () => {
                             {exp.type}
                           </p>
                         </div>
-                        <div className="print:text-xs text-sm">
+                        <ul className="print:text-xs text-sm flex">
                           {exp.stack.map((stack) => (
-                            <span className="text-green-1 print:text-green-0 font-semibold">
+                            <li className="text-green-1 print:text-green-0 font-semibold mr-1">
                               {stack},{" "}
-                            </span>
+                            </li>
                           ))}
-                        </div>
+                        </ul>
                       </div>
                       <div className="text-right whitespace-nowrap hidden sm:block">
                         <p className="print:text-xs text-sm font-semibold">
@@ -246,7 +246,7 @@ export const Resume = () => {
                 ))}
             </div>
           </div>
-          <div className="py-3 print:text-sm">
+          {/* <div className="py-3 print:text-sm">
             <p className="mb-3 print:text-xl text-xl font-bold">Projects</p>
             <div>
               Check out my site & Github for projects.
@@ -265,7 +265,7 @@ export const Resume = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* Note: Projects been commented instead of been removed from resume */}
           {/* <div className="py-4 text-sm">
             <p className="text-xl mb-3 font-bold">Projects</p>
