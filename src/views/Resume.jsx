@@ -17,7 +17,7 @@ export const Resume = () => {
             <a
               className="px-3 py-0.5 bg-yellow-0 rounded-full
               transition duration-300  hover:bg-black hover:ring-2 hover:ring-yellow-0"
-              href="/AmirhosseinKhodaei.pdf" target="_blank">
+              href="/Amirhossein-Khodaei-Resume.pdf" target="_blank">
               Download
             </a>
           </div>
@@ -95,7 +95,7 @@ export const Resume = () => {
           <div className="py-4 print:text-sm">
             <p className="mb-3 print:text-xl text-2xl font-bold">About Me</p>
             <div className="text-justify">
-            I am a front-end engineer with +3 years of experience and am familiar with back-end technologies. What truly satisfies my passion in the programming field is the act of solving problems and delving into new technologies. Learning and teaching web-based technologies is incredibly exciting, and as a developer, there's still a vast amount for me to explore and learn.
+            I am a front-end engineer with +3 years of experience and am familiar with front-end technologies. What truly satisfies my passion in the programming field is the act of solving problems and delving into new technologies. Learning and teaching web-based technologies is incredibly exciting, and as a developer, there's still a vast amount for me to explore and learn.
               <ul class="print:text-xs list-disc pl-4 pt-2 grid md:grid-cols-2 print:sm:grid-cols-2">
                 <li>Education: Master of Information Security Engineering</li>
                 <li>Marriage: Single</li>
