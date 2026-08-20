@@ -1,0 +1,1 @@
+var e=()=>{throw Error(`html2canvas is not bundled; the resume PDF is generated from text.`)};export{e as default};
