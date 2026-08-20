@@ -37,7 +37,7 @@ export const Resume = () => {
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
                   href="https://amirhosseinkhodaei.ir"
                   title="Webpage">
-                  <i class="fas fa-globe-americas text-light-0 mr-1.5" />{" "}
+                  <i className="fas fa-globe-americas text-light-0 mr-1.5" />{" "}
                   amirhosseinkhodaei.ir
                 </a>
               </div>
@@ -47,7 +47,7 @@ export const Resume = () => {
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-red-0"
                   href="mailto:amir76_kh@yahoo.com"
                   title="Email">
-                  <i class="fas fa-at text-light-0 mr-1.5" /> amir76_kh@yahoo.com
+                  <i className="fas fa-at text-light-0 mr-1.5" /> amir76_kh@yahoo.com
                 </a>
               </div>
               <div className="mb-2 print:mb-1.5">
@@ -56,7 +56,7 @@ export const Resume = () => {
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
                   href="tel:+989120126656"
                   title="Phone">
-                  <i class="fas fa-phone text-light-0 mr-1.5" /> +989120126656
+                  <i className="fas fa-phone text-light-0 mr-1.5" /> +989120126656
                 </a>
               </div>
               <div className="flex flex-wrap">
@@ -65,7 +65,7 @@ export const Resume = () => {
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-dark-2"
                   href="https://github.com/amirhosseinkhodaei"
                   title="Github">
-                  <i class="fab fa-github-alt text-light-0" />
+                  <i className="fab fa-github-alt text-light-0" />
                 </a>
 
                 <a
@@ -73,21 +73,21 @@ export const Resume = () => {
                   transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
                   href="https://www.linkedin.com/in/amirhossein-khodaei-36141b169/"
                   title="Linkedin">
-                  <i class="fab fa-linkedin-in text-light-0" />
+                  <i className="fab fa-linkedin-in text-light-0" />
                 </a>
                 <a
                   className="px-3.5 mr-2 py-0.5 font-bold bg-blue-0 rounded-full print:text-light-0
                   transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
                   href="https://twitter.com/amir76_kh"
                   title="Twitter">
-                  <i class="fab fa-twitter text-light-0" />
+                  <i className="fab fa-twitter text-light-0" />
                 </a>
                 <a
                   className="px-3.5 py-0.5 font-bold bg-blue-0 rounded-full print:text-light-0
                   transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0"
                   href="https://telegram.me/amir76_kh/"
                   title="Telegram">
-                  <i class="fab fa-telegram-plane text-light-0" />
+                  <i className="fab fa-telegram-plane text-light-0" />
                 </a>
               </div>
             </div>
@@ -96,7 +96,7 @@ export const Resume = () => {
             <p className="mb-3 print:text-xl text-2xl font-bold">About Me</p>
             <div className="text-justify">
             I am a front-end engineer with +3 years of experience and am familiar with front-end technologies. What truly satisfies my passion in the programming field is the act of solving problems and delving into new technologies. Learning and teaching web-based technologies is incredibly exciting, and as a developer, there's still a vast amount for me to explore and learn.
-              <ul class="print:text-xs list-disc pl-4 pt-2 grid md:grid-cols-2 print:sm:grid-cols-2">
+              <ul className="print:text-xs list-disc pl-4 pt-2 grid md:grid-cols-2 print:sm:grid-cols-2">
                 <li>Education: Master of Information Security Engineering</li>
                 <li>Marriage: Single</li>
                 <li>Date of Birth: 18 March 1998</li>
@@ -108,8 +108,8 @@ export const Resume = () => {
             <div>
               {educations
                 .filter((edu) => edu.showEducations)
-                .map((edu) => (
-                  <div className="py-2 first:pt-0">
+                .map((edu, i) => (
+                  <div key={i} className="py-2 first:pt-0">
                     <div className="flex justify-between">
                       <div>
                         <li className="print:text-base font-semibold">
@@ -142,9 +142,9 @@ export const Resume = () => {
             <p className="mb-2">
             In summary, I possess substantial experience working with the tools below and frequently utilize them in my work:
             </p>
-            <ul class="list-disc pl-4 grid sm:grid-cols-2 md:grid-cols-3 print:sm:grid-cols-3">
+            <ul className="list-disc pl-4 grid sm:grid-cols-2 md:grid-cols-3 print:sm:grid-cols-3">
               {skills.map((skill) => (
-                <li>{skill}</li>
+                <li key={skill}>{skill}</li>
               ))}
             </ul>
           </div>
@@ -153,8 +153,8 @@ export const Resume = () => {
             <div>
               {experiences
                 .filter((exp) => exp.showExperiences)
-                .map((exp) => (
-                  <div className="py-2 first:pt-0">
+                .map((exp, i) => (
+                  <div key={i} className="py-2 first:pt-0">
                     <div className="flex justify-between">
                       <div>
                         <p className="print:text-lg text-lg font-semibold">
@@ -176,7 +176,7 @@ export const Resume = () => {
                         </div>
                         <ul className="print:text-xs text-sm flex">
                           {exp.stack.map((stack) => (
-                            <li className="text-green-1 print:text-green-0 font-semibold mr-1">
+                            <li key={stack} className="text-green-1 print:text-green-0 font-semibold mr-1">
                               {stack},{" "}
                             </li>
                           ))}
@@ -195,14 +195,15 @@ export const Resume = () => {
                       </div>
                     </div>
                     <div className="mt-2 mb-2 text-justify">
-                      {exp.about.map((line) => (
-                        <span> {line}</span>
+                      {exp.about.map((line, j) => (
+                        <span key={j}> {line}</span>
                       ))}
                     </div>
                     {exp.links?.length > 0 ? (
                       <div className="flex flex-row flex-wrap">
                         {exp.links.map((link) => (
                           <a
+                            key={link.href}
                             className="px-3 py-0.5 mx-1 my-1 font-bold bg-blue-0 rounded-full print:text-light-0
                             transition duration-300 hover:bg-black hover:ring-2 hover:ring-blue-0
                             print:text-sm print:px-2 print:py-0"
@@ -215,9 +216,9 @@ export const Resume = () => {
                     {exp.responsibilities?.length > 0 ? (
                       <div className="mt-2 mb-2 print:text-sm text-justify">
                         <p className="font-bold">{exp.responsible}</p>
-                        <ul class="list-disc pl-4">
-                          {exp.responsibilities.map((line) => (
-                            <li>{line}</li>
+                        <ul className="list-disc pl-4">
+                          {exp.responsibilities.map((line, j) => (
+                            <li key={j}>{line}</li>
                           ))}
                         </ul>
                       </div>
@@ -225,9 +226,9 @@ export const Resume = () => {
                     {exp.contributions?.length > 0 ? (
                       <div className="mt-2 mb-2 print:text-sm text-justify">
                         <p className="font-bold">{exp.contribution}</p>
-                        <ul class="list-disc pl-4">
-                          {exp.contributions?.map((line) => (
-                            <li>{line}</li>
+                        <ul className="list-disc pl-4">
+                          {exp.contributions?.map((line, j) => (
+                            <li key={j}>{line}</li>
                           ))}
                         </ul>
                       </div>
@@ -235,9 +236,9 @@ export const Resume = () => {
                     {exp.achievements?.length > 0 ? (
                       <div className="mt-2 mb-2 print:text-sm text-justify">
                         <p className="font-bold">{exp.achievement}</p>
-                        <ul class="list-disc pl-4">
-                          {exp.achievements?.map((line) => (
-                            <li>{line}</li>
+                        <ul className="list-disc pl-4">
+                          {exp.achievements?.map((line, j) => (
+                            <li key={j}>{line}</li>
                           ))}
                         </ul>
                       </div>
@@ -250,7 +251,7 @@ export const Resume = () => {
             <p className="mb-3 print:text-xl text-xl font-bold">Projects</p>
             <div>
               Check out my site & Github for projects.
-              <div class="flex flex-row flex-wrap mt-2">
+              <div className="flex flex-row flex-wrap mt-2">
                 <a
                   href="https://amirhosseinkhodaei.ir/#projects"
                   className="px-3 py-0.5 mx-1 my-1 font-bold bg-blue-0 rounded-full print:text-light-0
@@ -292,7 +293,7 @@ export const Resume = () => {
                     </div>
                     {pro.links ? (
                       <div>
-                        <ul class="list-disc pl-3 text-sm">
+                        <ul className="list-disc pl-3 text-sm">
                           {pro.links.map((link) => (
                             <li className="text-blue-0 font-semibold my-0.5 first:mt-0">
                               <a href={link.href}>{link.title}</a>

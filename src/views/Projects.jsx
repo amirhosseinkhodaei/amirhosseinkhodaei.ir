@@ -39,14 +39,14 @@ export const Projects = () => {
               .filter((pro) => pro.showProjects)
               .sort((a, b) => b.orderProjects - a.orderProjects)
               .map((pro) => (
-                <div>
+                <div key={pro.title}>
                   <p className="text-xl font-bold">{pro.title}</p>
                   <div className="flex flex-row">
                     {pro.links.map((link) => (
-                      <a href={link.href} title={link.titleInfo} target="_blank" rel="noreferrer">
+                      <a key={link.href} href={link.href} title={link.titleInfo} target="_blank" rel="noreferrer">
                         <span
                           className={`flex items-center justify-center rounded-md transition duration-300 hover:bg-black hover:ring-2 ${link.ringColor} ${link.bgColor} w-[40px] h-[40px] m-0 p-0 mr-2 mt-2`}>
-                          <i class={`${link.icon} text-lg`} />
+                          <i className={`${link.icon} text-lg`} />
                         </span>
                       </a>
                     ))}
@@ -55,14 +55,14 @@ export const Projects = () => {
                     <div>
                       <div className="text-sm mt-2">
                         {pro.stack.map((stack) => (
-                          <span className="text-green-1 print:text-green-0 font-semibold">
+                          <span key={stack} className="text-green-1 print:text-green-0 font-semibold">
                             {stack},{" "}
                           </span>
                         ))}
                       </div>
                       <div className="mt-1">
-                        {pro.about.map((line) => (
-                          <p>{line}</p>
+                        {pro.about.map((line, i) => (
+                          <p key={i}>{line}</p>
                         ))}
                       </div>
                     </div>

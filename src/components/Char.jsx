@@ -54,7 +54,7 @@ export const getCharsMatrix = (row, col) => {
   for (var i = 0; i < row; i++) {
     let _row = [];
     for (var j = 0; j < col; j++) {
-      _row.push(<Char />);
+      _row.push(<Char key={j} />);
     }
     charsMatrix.push(_row);
   }
@@ -77,7 +77,7 @@ export const setCharsMatrix = (
       } catch {}
       try {
         charsMatrix[i][j] =
-          char && char !== " " ? <Char value={char} /> : <Char />;
+          char && char !== " " ? <Char key={j} value={char} /> : <Char key={j} />;
       } catch {}
     }
   }
