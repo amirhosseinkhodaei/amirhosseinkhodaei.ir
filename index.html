@@ -15,6 +15,9 @@
       content="Amirhossein Khodaei, front-end engineer, frontend developer, React, Next.js, Vue.js, TypeScript, JavaScript, Laravel, design system, Tailwind CSS, Isfahan, Iran, resume, portfolio, امیرحسین خدائی, برنامه نویس وب, مهندس فرانت اند, رزومه"
     />
     <link rel="canonical" href="https://amirhosseinkhodaei.ir/" />
+    <link rel="alternate" hreflang="en" href="https://amirhosseinkhodaei.ir/" />
+    <link rel="alternate" hreflang="de" href="https://amirhosseinkhodaei.ir/de" />
+    <link rel="alternate" hreflang="x-default" href="https://amirhosseinkhodaei.ir/" />
 
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0b0c0d" media="(prefers-color-scheme: dark)" />
@@ -93,6 +96,10 @@
             (!stored &&
               window.matchMedia("(prefers-color-scheme: dark)").matches);
           if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {}
+        try {
+          var seg = location.pathname.split("/")[1];
+          if (seg === "de") document.documentElement.lang = seg;
         } catch (e) {}
       })();
     </script>

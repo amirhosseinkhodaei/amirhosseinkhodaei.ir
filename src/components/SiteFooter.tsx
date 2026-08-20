@@ -1,13 +1,17 @@
 import { profile } from "@/data";
+import { useI18n } from "@/i18n/context";
 import { Icon } from "./Icon";
 
 const socials = profile.contacts.filter((contact) => !contact.primary);
 
-export const SiteFooter = () => (
+export const SiteFooter = () => {
+  const { t } = useI18n();
+
+  return (
   <footer className="border-t border-line print:hidden">
     <div className="mx-auto flex max-w-3xl flex-col items-center justify-between gap-4 px-5 py-8 sm:flex-row">
       <p className="text-sm text-subtle">
-        © {new Date().getFullYear()} {profile.name}
+        © {new Date().getFullYear()} {t(profile.name)}
       </p>
       <ul className="flex items-center gap-1">
         {socials.map((social) => (
@@ -27,4 +31,5 @@ export const SiteFooter = () => (
       </ul>
     </div>
   </footer>
-);
+  );
+};

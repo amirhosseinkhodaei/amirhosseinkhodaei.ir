@@ -1,4 +1,6 @@
 import type { jsPDF } from "jspdf";
+import { DEFAULT_LOCALE, type Locale, type Localized } from "@/i18n/config";
+import { ui } from "@/i18n/ui";
 import { profile, skills, experiences, educations, projects } from "@/data";
 
 const PAGE_WIDTH = 595.28;
@@ -14,6 +16,10 @@ const MUTED = 68;
 const RULE = 176;
 
 const SEPARATOR = "  •  ";
+
+let active: Locale = DEFAULT_LOCALE;
+
+const en = <T,>(value: Localized<T>): T => value[active];
 
 interface Cursor {
   doc: jsPDF;
@@ -131,7 +137,7 @@ const writeContactFlow = (cursor: Cursor) => {
   const step = lineHeight(size);
 
   const segments = [
-    { text: profile.location, href: null as string | null },
+    { text: en(profile.location), href: null as string | null },
     ...profile.contacts.map((contact) => ({
       text: contact.label,
       href: contact.href,
@@ -174,18 +180,18 @@ const writeHeader = (cursor: Cursor) => {
   const { doc } = cursor;
 
   setBody(doc, 21, true);
-  doc.text(profile.name, MARGIN_X, cursor.y + 21);
+  doc.text(en(profile.name), MARGIN_X, cursor.y + 21);
   cursor.y += 27;
 
   setBody(doc, 11.5, false, MUTED);
-  doc.text(profile.title, MARGIN_X, cursor.y + 11.5);
+  doc.text(en(profile.title), MARGIN_X, cursor.y + 11.5);
   cursor.y += 18;
 
   writeContactFlow(cursor);
 };
 
 const writeExperience = (cursor: Cursor) => {
-  writeSectionHeading(cursor, "Work Experience");
+  writeSectionHeading(cursor, en(ui.resumeExperience));
 
   experiences
     .filter((job) => job.visible)
@@ -195,26 +201,26 @@ const writeExperience = (cursor: Cursor) => {
 
       writeHeaderRow(
         cursor,
-        `${job.role}, ${job.company}`,
-        `${job.startDate} - ${job.endDate}`,
+        `${en(job.role)}, ${job.company}`,
+        `${en(job.startDate)} - ${en(job.endDate)}`,
         11,
         true
       );
-      writeLines(cursor, `${job.location} · ${job.employmentType}`, {
+      writeLines(cursor, `${en(job.location)} · ${en(job.employmentType)}`, {
         size: 9,
         color: MUTED,
         gapAfter: 2,
       });
-      writeLines(cursor, job.context, {
+      writeLines(cursor, en(job.context), {
         size: 9.5,
         color: MUTED,
         gapAfter: 4,
       });
 
-      job.highlights.forEach((highlight) => writeBullet(cursor, highlight));
+      en(job.highlights).forEach((highlight) => writeBullet(cursor, highlight));
 
       cursor.y += 3;
-      writeLines(cursor, `Technologies: ${job.stack.join(", ")}`, {
+      writeLines(cursor, `${en(ui.technologies)}: ${job.stack.join(", ")}`, {
         size: 9,
         color: MUTED,
       });
@@ -222,20 +228,20 @@ const writeExperience = (cursor: Cursor) => {
 };
 
 const writeSkills = (cursor: Cursor) => {
-  writeSectionHeading(cursor, "Technical Skills");
+  writeSectionHeading(cursor, en(ui.resumeSkills));
 
   skills.forEach((group) => {
     const { doc } = cursor;
     const size = 9.5;
     const step = lineHeight(size);
-    const label = `${group.category}:`;
+    const label = `${en(group.category)}:`;
 
     setBody(doc, size, true);
     const labelWidth = doc.getTextWidth(label) + 4;
 
     setBody(doc, size);
     const lines = doc.splitTextToSize(
-      group.items.join(", "),
+      en(group.items).join(", "),
       CONTENT_WIDTH - labelWidth
     ) as string[];
 
@@ -255,7 +261,7 @@ const writeSkills = (cursor: Cursor) => {
 };
 
 const writeProjects = (cursor: Cursor) => {
-  writeSectionHeading(cursor, "Projects");
+  writeSectionHeading(cursor, en(ui.resumeProjects));
 
   projects
     .filter((project) => project.visible)
@@ -273,7 +279,7 @@ const writeProjects = (cursor: Cursor) => {
 
       if (project.role) {
         setBody(doc, 9.5, false, MUTED);
-        doc.text(` - ${project.role}`, MARGIN_X + titleWidth, cursor.y + 10);
+        doc.text(` - ${en(project.role)}`, MARGIN_X + titleWidth, cursor.y + 10);
       }
 
       setBody(doc, 9, false, MUTED);
@@ -282,14 +288,14 @@ const writeProjects = (cursor: Cursor) => {
       });
       cursor.y += lineHeight(10);
 
-      writeLines(cursor, project.description, {
+      writeLines(cursor, en(project.description), {
         size: 9.5,
         color: MUTED,
         gapAfter: project.highlights ? 2 : 6,
       });
 
       if (project.highlights) {
-        project.highlights.forEach((highlight) =>
+        en(project.highlights).forEach((highlight) =>
           writeBullet(cursor, highlight)
         );
         cursor.y += 6;
@@ -298,7 +304,7 @@ const writeProjects = (cursor: Cursor) => {
 };
 
 const writeEducation = (cursor: Cursor) => {
-  writeSectionHeading(cursor, "Education");
+  writeSectionHeading(cursor, en(ui.resumeEducation));
 
   educations
     .filter((school) => school.visible)
@@ -306,12 +312,12 @@ const writeEducation = (cursor: Cursor) => {
       ensureSpace(cursor, 34);
       writeHeaderRow(
         cursor,
-        `${school.degree}, ${school.field}`,
-        `${school.startDate} - ${school.endDate}`,
+        `${en(school.degree)}, ${en(school.field)}`,
+        `${en(school.startDate)} - ${en(school.endDate)}`,
         10,
         true
       );
-      writeLines(cursor, school.institution, {
+      writeLines(cursor, en(school.institution), {
         size: 9.5,
         color: MUTED,
         gapAfter: 5,
@@ -327,28 +333,30 @@ const writeFooters = (doc: jsPDF) => {
     doc.setPage(page);
     setBody(doc, 8, false, MUTED);
     doc.text(
-      `${profile.name} - Page ${page} of ${total}`,
+      `${en(profile.name)} - ${en(ui.pdfPage)} ${page} ${en(ui.pdfPageOf)} ${total}`,
       MARGIN_X,
       PAGE_HEIGHT - 28
     );
   }
 };
 
-export const buildResumePdf = (doc: jsPDF): jsPDF => {
+export const buildResumePdf = (doc: jsPDF, locale: Locale = DEFAULT_LOCALE): jsPDF => {
+  active = locale;
+
   doc.setProperties({
-    title: `${profile.name} — ${profile.title} — Resume`,
-    subject: "Resume",
-    author: profile.name,
-    keywords: skills.flatMap((group) => group.items).join(", "),
-    creator: profile.name,
+    title: `${en(profile.name)} — ${en(profile.title)} — ${en(ui.pdfDocumentKind)}`,
+    subject: en(ui.pdfDocumentKind),
+    author: en(profile.name),
+    keywords: skills.flatMap((group) => en(group.items)).join(", "),
+    creator: en(profile.name),
   });
-  doc.setLanguage("en-US");
+  doc.setLanguage(active === "de" ? "de-DE" : "en-US");
 
   const cursor: Cursor = { doc, y: MARGIN_TOP };
 
   writeHeader(cursor);
-  writeSectionHeading(cursor, "Professional Summary");
-  writeLines(cursor, profile.summary, { size: 9.5, color: MUTED });
+  writeSectionHeading(cursor, en(ui.resumeSummary));
+  writeLines(cursor, en(profile.summary), { size: 9.5, color: MUTED });
   writeExperience(cursor);
   writeSkills(cursor);
   writeProjects(cursor);
@@ -358,10 +366,13 @@ export const buildResumePdf = (doc: jsPDF): jsPDF => {
   return doc;
 };
 
-export const resumeFileName = `${profile.name.split(" ").join("-")}-Resume.pdf`;
+export const resumeFileName = (locale: Locale = DEFAULT_LOCALE): string =>
+  `${profile.name[locale].split(" ").join("-")}-${ui.pdfFileSuffix[locale]}.pdf`;
 
-export const downloadResumePdf = async (): Promise<void> => {
+export const downloadResumePdf = async (
+  locale: Locale = DEFAULT_LOCALE
+): Promise<void> => {
   const { jsPDF: JsPDF } = await import("jspdf");
   const doc = new JsPDF({ unit: "pt", format: "a4", compress: true });
-  buildResumePdf(doc).save(resumeFileName);
+  buildResumePdf(doc, locale).save(resumeFileName(locale));
 };

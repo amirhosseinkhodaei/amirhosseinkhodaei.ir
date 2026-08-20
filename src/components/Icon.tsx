@@ -15,6 +15,10 @@ const stroked: Partial<Record<IconName, string>> = {
   "arrow-up-right": "M7 17 17 7M8 7h9v9",
   sun: "M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4",
   moon: "M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z",
+  languages:
+    "M2 5h10M7 3v2c0 4.4-2.2 8-5 8M4 9c0 2.8 2.7 5 6 5M12 20l4-9 4 9M14.5 16h5",
+  check: "M20 6 9 17l-5-5",
+  "chevron-down": "m6 9 6 6 6-6",
 };
 
 const filled: Partial<Record<IconName, string>> = {

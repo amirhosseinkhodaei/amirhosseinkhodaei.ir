@@ -1,3 +1,5 @@
+import type { Localized } from "@/i18n/config";
+
 export type IconName =
   | "globe"
   | "mail"
@@ -13,7 +15,10 @@ export type IconName =
   | "arrow-up-right"
   | "sun"
   | "moon"
-  | "print";
+  | "print"
+  | "languages"
+  | "check"
+  | "chevron-down";
 
 export interface ContactLink {
   label: string;
@@ -23,31 +28,31 @@ export interface ContactLink {
 }
 
 export interface Profile {
-  name: string;
-  title: string;
-  location: string;
-  summary: string;
-  intro: string;
+  name: Localized;
+  title: Localized;
+  location: Localized;
+  summary: Localized;
+  intro: Localized;
   contacts: ContactLink[];
 }
 
 export interface SkillGroup {
-  category: string;
-  items: string[];
+  category: Localized;
+  items: Localized<string[]>;
 }
 
 export interface Experience {
-  role: string;
+  role: Localized;
   company: string;
   companyUrl?: string;
-  context: string;
-  startDate: string;
+  context: Localized;
+  startDate: Localized;
   startISO: string;
-  endDate: string;
+  endDate: Localized;
   endISO?: string;
-  location: string;
-  employmentType: string;
-  highlights: string[];
+  location: Localized;
+  employmentType: Localized;
+  highlights: Localized<string[]>;
   stack: string[];
   links?: { title: string; href: string }[];
   visible: boolean;
@@ -55,9 +60,9 @@ export interface Experience {
 
 export interface Project {
   title: string;
-  role?: string;
-  description: string;
-  highlights?: string[];
+  role?: Localized;
+  description: Localized;
+  highlights?: Localized<string[]>;
   stack: string[];
   href: string;
   order: number;
@@ -65,12 +70,12 @@ export interface Project {
 }
 
 export interface Education {
-  degree: string;
-  institution: string;
-  field: string;
-  startDate: string;
+  degree: Localized;
+  institution: Localized;
+  field: Localized;
+  startDate: Localized;
   startISO: string;
-  endDate: string;
+  endDate: Localized;
   endISO: string;
   visible: boolean;
 }

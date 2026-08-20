@@ -10,6 +10,7 @@ My personal site and résumé.
 | Language | TypeScript 7 (strict) |
 | Build | Vite 8 |
 | Styling | Tailwind CSS 4 (CSS-first theme, light/dark) |
+| Languages | English, German |
 | Hosting | GitHub Pages |
 
 ## Scripts
@@ -27,8 +28,9 @@ npm run deploy   # build and publish dist/ to the gh-pages branch
 
 ```
 src/
-  App.tsx            routes, document titles, legacy /#hash redirects
+  App.tsx            locale routes, document titles, legacy /#hash redirects
   index.tsx          entry point
+  i18n/              locale config, translation context, UI strings
   types/resume.ts    shared content types
   data/              résumé content — edit these to update the site
   components/        layout, icons, theme toggle, shared UI
@@ -39,6 +41,19 @@ src/
 
 All résumé content lives in `src/data/`. Every file is typed against
 `src/types/resume.ts`, so a typo in a field name fails `npm run build`.
+Translatable fields are typed as `Localized<T>` = `Record<"en" | "de", T>`,
+so adding a language or forgetting a translation is a compile error rather than
+a missing string at runtime.
+
+## Languages
+
+English is served from `/` and German from `/de`, each with `/resume` and
+`/projects` beneath it. The switcher in the header keeps the current page when
+changing language. `<html lang>` is set before first paint by the inline script
+in `index.html`, and again on every navigation.
+
+Adding a language means adding it to `LOCALES` in `src/i18n/config.ts`; every
+`Localized<T>` field then fails to compile until it has a translation.
 
 ## Notes
 
@@ -48,6 +63,8 @@ All résumé content lives in `src/data/`. Every file is typed against
 - The résumé page is semantic (single `h1`, ATS-standard section headings,
   `<time>` elements for every date) and has a dedicated A4 print stylesheet with
   orphan/widow control.
+- The downloadable PDF is always English, which is the norm for technical
+  résumés.
 - "Download PDF" generates the file in the browser from `src/data/` via jsPDF —
   no PDF is committed to the repo, so the download can never drift from the
   site. The output is real selectable text in a single column, which is what
