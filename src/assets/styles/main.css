@@ -71,6 +71,16 @@
     text-rendering: optimizeLegibility;
   }
 
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [role="button"][aria-disabled="true"] {
+    cursor: default;
+  }
+
   ::selection {
     background-color: var(--accent);
     color: var(--accent-fg);
