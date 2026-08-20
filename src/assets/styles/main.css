@@ -1,84 +1,200 @@
 @import "./fonts.css";
 @import "tailwindcss";
 
-/* Tailwind v4 CSS-first theme (replaces the old tailwind.config.js) */
-@theme {
-  /* drop the default palette, keep only the gruvbox-ish colors below */
-  --color-*: initial;
+@custom-variant dark (&:where(.dark, .dark *));
 
-  --color-black: #000000;
-  --color-white: #ffffff;
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
 
-  --color-dark-0: #1d2021;
-  --color-dark-1: #282828;
-  --color-dark-2: #32302f;
-  --color-dark-3: #3c3836;
-  --color-dark-4: #504945;
-  --color-dark-5: #665c54;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --color-light-0: #f9f5d7;
-  --color-light-1: #fbf1c7;
-  --color-light-2: #f2e5bc;
-  --color-light-3: #ebdbb2;
-  --color-light-4: #d5c4a1;
-  --color-light-5: #bdae93;
+  --radius-card: 14px;
+}
 
-  --color-gray-0: #7c6f64;
-  --color-gray-1: #928374;
-  --color-gray-2: #a89984;
+:root {
+  color-scheme: light;
 
-  --color-red-0: #9d0006;
-  --color-red-1: #cc241d;
-  --color-red-2: #fb4934;
+  --bg: #ffffff;
+  --surface: #f6f7f8;
+  --elevated: #ffffff;
+  --line: #e5e5e8;
+  --fg: #101012;
+  --muted: #53535d;
+  --subtle: #8a8a94;
+  --accent: #0d7a6e;
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(13, 122, 110, 0.1);
+}
 
-  --color-green-0: #79740e;
-  --color-green-1: #98971a;
-  --color-green-2: #b8bb26;
+.dark {
+  color-scheme: dark;
 
-  --color-yellow-0: #b57614;
-  --color-yellow-1: #d79921;
-  --color-yellow-2: #fabd2f;
-
-  --color-blue-0: #076678;
-  --color-blue-1: #458588;
-  --color-blue-2: #83a598;
-
-  --color-purple-0: #8f3f71;
-  --color-purple-1: #b16286;
-  --color-purple-2: #d3869b;
-
-  --color-aqua-0: #427b58;
-  --color-aqua-1: #689d6a;
-  --color-aqua-2: #8ec07c;
-
-  --color-orange-0: #af3a03;
-  --color-orange-1: #d65d0e;
-  --color-orange-2: #fe8019;
-
-  --font-jbm: JBM;
+  --bg: #0b0c0d;
+  --surface: #131517;
+  --elevated: #1a1d1f;
+  --line: #26292c;
+  --fg: #f3f4f5;
+  --muted: #a1a6aa;
+  --subtle: #71767a;
+  --accent: #35d6bd;
+  --accent-fg: #062420;
+  --accent-soft: rgba(53, 214, 189, 0.12);
 }
 
 @layer base {
+  * {
+    border-color: var(--line);
+  }
+
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
 
-  * {
-    @apply text-light-0;
-    font-family: JBM;
-    letter-spacing: -0.6px;
-    word-spacing: -3px;
-    line-height: 1.4;
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
-  @media print {
-    html,
-    body {
-      background-color: #ffffff !important;
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-fg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
     }
-    * {
-      @apply text-black;
-      font-family: JBM;
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
+  }
+}
+
+@utility mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-rise {
+  animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 14mm 16mm;
+  }
+
+  :root,
+  .dark {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --elevated: #ffffff;
+    --line: #b4b4b8;
+    --fg: #000000;
+    --muted: #1a1a1a;
+    --subtle: #333333;
+    --accent: #000000;
+    --accent-fg: #ffffff;
+    --accent-soft: #ffffff;
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10pt;
+    line-height: 1.35;
+    -webkit-print-color-adjust: economy;
+    print-color-adjust: economy;
+  }
+
+  body {
+    font-feature-settings: normal;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+  }
+
+  a,
+  a:visited {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+
+  section {
+    break-inside: auto;
+  }
+
+  .print-break-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  svg {
+    display: none !important;
   }
 }
